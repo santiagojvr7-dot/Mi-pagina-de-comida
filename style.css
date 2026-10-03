@@ -1,0 +1,347 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fff8f0, #f0fff4);
+    text-align: center;
+    margin: 0;
+    padding: 40px 20px;
+    color: #333;
+}
+
+/* Título principal */
+h1 {
+    color: #e67e22;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* Descripción */
+.descripcion {
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+/* Buscador */
+#buscador {
+    width: 80%;
+    max-width: 550px;
+    padding: 15px 20px;
+    margin: 20px auto;
+    border: 2px solid #e67e22;
+    border-radius: 30px;
+    font-size: 17px;
+    outline: none;
+    display: block;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+#buscador:focus {
+    border-color: #d35400;
+    box-shadow: 0 0 0 4px rgba(230, 126, 34, 0.15);
+}
+
+/* Botones de categorías */
+.categorias {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 25px auto 35px;
+}
+
+.categorias button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #e67e22, #f39c12);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.categorias button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenedor de tarjetas */
+#contenedorComidas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Tarjetas */
+#contenedorComidas .comida {
+    background-color: white;
+    width: 280px;
+    min-height: 210px;
+    margin: 0;
+    padding: 22px;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-sizing: border-box;
+}
+
+/* Animación de las tarjetas */
+#contenedorComidas .comida:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Nombre de la comida */
+.comida h2 {
+    color: #e67e22;
+    font-size: 23px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* Texto de las tarjetas */
+.comida p {
+    font-size: 15px;
+    line-height: 1.5;
+    text-align: left;
+    color: #555;
+}
+
+/* Texto destacado */
+.comida strong {
+    color: #333;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 600px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .descripcion {
+        font-size: 16px;
+    }
+
+    #buscador {
+        width: 90%;
+    }
+
+    #contenedorComidas .comida {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .categorias button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+/* ENCABEZADO */
+.encabezado {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #e67e22;
+}
+
+/* MENÚ */
+.encabezado nav {
+    display: flex;
+    gap: 20px;
+}
+
+/* ENLACES */
+.encabezado nav a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+.encabezado nav a:hover {
+    color: #e67e22;
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .encabezado nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+/* MEJORA DE LAS TARJETAS */
+
+.comida {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comida:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+}
+
+.comida h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.comida p {
+    line-height: 1.6;
+}
+
+.comida strong {
+    color: #e67e22;
+}
+
+/* Efecto suave al pasar el mouse */
+
+.comida::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #e67e22;
+}
+
+/* MEJORA VISUAL DE LAS TARJETAS */
+
+.comida {
+    border: 1px solid #f0f0f0;
+    background: linear-gradient(180deg, #ffffff, #fffaf5);
+}
+
+.comida h2 {
+    text-align: center;
+}
+
+.comida p {
+    text-align: left;
+}
+
+/* Efecto al pasar el mouse */
+.comida:hover h2 {
+    color: #d35400;
+}
+
+/* Botones más bonitos */
+.categorias button {
+    transition: all 0.3s ease;
+}
+
+.categorias button:active {
+    transform: scale(0.95);
+}
+
+/* MEJORA DEL BUSCADOR */
+
+#buscador {
+    transition: all 0.3s ease;
+}
+
+#buscador:hover {
+    box-shadow: 0 5px 15px rgba(230, 126, 34, 0.15);
+}
+
+#buscador:focus {
+    border-color: #d35400;
+    box-shadow: 0 0 0 4px rgba(230, 126, 34, 0.15);
+    transform: scale(1.02);
+}
+
+/* MEJORA DE LOS BOTONES */
+
+.categorias button {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.categorias button:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.18);
+}
+
+.categorias button:active {
+    transform: scale(0.95);
+}
+/* DESPLAZAMIENTO SUAVE */
+
+html {
+    scroll-behavior: smooth;
+}
+/* MEJORAR EL ENCABEZADO EN CELULARES */
+
+@media (max-width: 600px) {
+
+    .encabezado {
+        padding: 15px;
+        margin-bottom: 25px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .encabezado nav {
+        gap: 10px;
+    }
+
+    .encabezado nav a {
+        font-size: 14px;
+    }
+}
+/* PIE DE PÁGINA */
+
+.pie-pagina {
+    margin-top: 50px;
+    padding: 30px 20px;
+    background-color: #e67e22;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.pie-pagina p {
+    margin: 8px 0;
+}
+
+.pie-pagina p:first-child {
+    font-size: 22px;
+    font-weight: bold;
+}
